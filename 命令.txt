@@ -1,0 +1,22 @@
+#voc数据集的训练检测命令
+python train.py --data data\voc.data --cfg cfg\yolov3-tiny.cfg
+python train.py --data data\voc.data --cfg cfg/yolov3-tiny.cfg --resume
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\best.pt
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\latest.pt
+
+python train.py --data data\voc.data --cfg cfg\yolov3.cfg
+python train.py --data data\voc.data --cfg cfg\yolov3.cfg --resume
+python detect.py --images input\ --cfg cfg\yolov3.cfg --weights weights\best.pt
+python detect.py --images input\ --cfg cfg\yolov3.cfg --weights weights\latest.pt
+
+#blood cell images数据集的训练检测命令
+python train.py --data data\rbc.data --cfg cfg\yolov3-tiny.cfg
+python train.py --data data\rbc.data --cfg cfg\yolov3-tiny.cfg --resume
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\best.pt
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\latest.pt
+
+#matting human数据集的训练检测命令
+python train.py --data data\part.data --cfg cfg\yolov3-tiny.cfg
+python train.py --data data\part.data --cfg cfg\yolov3-tiny.cfg --resume
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\best.pt
+python detect.py --images input\ --cfg cfg\yolov3-tiny.cfg --weights weights\latest.pt
